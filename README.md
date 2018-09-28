@@ -2,11 +2,11 @@
 
 This is part for final project for Coursera course 'Getting and Cleaning Data'
 
-#Code Book.md
+# Code Book.md
 It contains details of the coulmns and dataset in 'tidyData.txt'
 It has list of all the column names
 
-#run_analysis.R
+# run_analysis.R
 This is a R script in which has been used to create the tidy data set. It contains following steps. 
 
 1. Download the dataset from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones in the working directory

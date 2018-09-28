@@ -1,7 +1,7 @@
+#load Libraries
 library(reshape2)
 library(dplyr)
 library(tidyr)
-
 
 #File name to be downloaded
 filename <- "./data/Dataset.zip"
@@ -65,8 +65,8 @@ finalData$subject <- as.factor(finalData$subject)
 #Approach 1. Melt and Cast 
 finalDataMelt <- melt(finalData, id = c("subject", "activity"))
 finalDataMean <- dcast(finalDataMelt, subject + activity ~ variable, mean)
-write.table(finalDataMean, "tidyData1.txt", row.names = FALSE, quote = FALSE)
+write.table(finalDataMean, "tidyData.txt", row.names = FALSE, quote = FALSE)
 
 #Approach 2. Use Aggregate function on subject and activity together
 tidyDataSet <- aggregate(. ~subject + activity, finalData, mean)
-write.table(tidyDataSet, "tidyData2.txt", row.names = FALSE, quote = FALSE)
+write.table(tidyDataSet, "tidyDataSet.txt", row.names = FALSE, quote = FALSE)
